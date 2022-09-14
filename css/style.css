@@ -4,6 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Overpass";
 }
 
 body {
@@ -21,14 +22,159 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #121417;
+}
+
+main {
+  width: 85%;
+  max-width: 320px;
+  border-radius: 1em;
+  background-color: #1c232D;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+main .ratingState {
+  margin: 1.4em;
+}
+
+main .ratingState img {
+  width: 40px;
+  border-radius: 8em;
+  padding: 0.8em;
+  background-color: #252d37;
+}
+
+main .ratingState ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .ratingState li {
+  width: 40px;
+  height: 40px;
+  font-size: .8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7c8798;
+  border-radius: 8em;
+  padding: .8em;
+  background-color: #252d37;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .ratingState li:hover {
+  cursor: pointer;
+  background-color: #7c8798;
+  color: white;
+}
+
+main .ratingState button {
+  background-color: #fb7413;
+  border: none;
+  margin-top: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-size: .8em;
+  width: 100%;
+  height: 3em;
+  border-radius: 2em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+main .ratingState button:hover {
+  cursor: pointer;
+  color: #fb7413;
+  background-color: white;
+}
+
+main h1 {
+  color: white;
+  margin: .3em 0em;
+  font-size: 1.5em;
+}
+
+main p {
+  color: #7c8798;
+  font-weight: normal;
+  font-size: .9em;
+  line-height: 1.5em;
+}
+
+main .thankYouState {
+  margin: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+main .thankYouState img {
+  width: 60%;
+}
+
+main .thankYouState .rating {
+  border-radius: 8em;
+  background-color: #252d37;
+  color: #fb7413;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .5em 1em;
+  margin: 1em;
 }
 
 .attribution {
-  font-size: 11px;
+  margin-top: 1em;
+  font-size: 12px;
   text-align: center;
+  color: #7c8798;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: white;
+}
+
+@media only screen and (min-width: 1400px) {
+  body {
+    font-size: 24px;
+  }
+  main {
+    max-width: 450px;
+  }
+  main .ratingState img {
+    width: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
