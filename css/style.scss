@@ -17,6 +17,7 @@ main {
   transition: all 0.5s ease;
 
   .ratingState {
+    transition: all 0.5s ease;
     margin: 1.4em;
 
 
@@ -35,6 +36,7 @@ main {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      margin-top:1em;
     }
 
     li {
@@ -49,13 +51,6 @@ main {
       padding: .8em;
       background-color: $DarkBlue;
       transition: all 0.2s ease-in-out;
-
-      &:hover {
-        cursor: pointer;
-        background-color: $MediumGrey;
-        color: $White;
-      }
-
     }
 
     button {
@@ -93,6 +88,7 @@ main {
   }
 
   .thankYouState {
+    transition: all 0.5s ease;
     margin: 1.4em;
     display: flex;
     align-items: center;

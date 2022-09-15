@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:export {
+  Orange: #fb7413;
+  White: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +40,8 @@ main {
 }
 
 main .ratingState {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   margin: 1.4em;
 }
 
@@ -60,6 +67,7 @@ main .ratingState ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 1em;
 }
 
 main .ratingState li {
@@ -81,12 +89,6 @@ main .ratingState li {
   background-color: #252d37;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-main .ratingState li:hover {
-  cursor: pointer;
-  background-color: #7c8798;
-  color: white;
 }
 
 main .ratingState button {
@@ -123,6 +125,8 @@ main p {
 }
 
 main .thankYouState {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   margin: 1.4em;
   display: -webkit-box;
   display: -ms-flexbox;
