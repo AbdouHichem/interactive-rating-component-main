@@ -83,10 +83,8 @@ main .ratingState li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #7c8798;
   border-radius: 8em;
   padding: .8em;
-  background-color: #252d37;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -141,7 +139,6 @@ main .thankYouState {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: none;
 }
 
 main .thankYouState img {
@@ -157,6 +154,30 @@ main .thankYouState .rating {
   width: max-content;
   padding: .5em 1em;
   margin: 1em;
+}
+
+main .thankYouState p {
+  text-align: center;
+}
+
+main .hide {
+  display: none;
+}
+
+main .mousein {
+  cursor: pointer;
+  background-color: #7c8798;
+  color: white;
+}
+
+main .initBtn {
+  color: #7c8798;
+  background-color: #252d37;
+}
+
+main .active {
+  color: white;
+  background-color: #fb7413;
 }
 
 .attribution {

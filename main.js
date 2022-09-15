@@ -7,41 +7,50 @@ const ul = ratingState.querySelector("ul");
 let rateValueText= thankYouState.querySelector(".rating");
 var rateValue = 0;
 
+
+
+thankYouState.classList.add('hide');
+
+
 submitButton.addEventListener("click", submitFnc);
+
+list.forEach(element => {
+    element.classList.add('initBtn');
+});
+
 
 ul.addEventListener("click", function (e) {
     if (e.target && e.target.nodeName == "LI") {
-        console.log(e.target.textContent + " was clicked");
+       
         restoreState();
         rateValue = e.target.textContent;
-        e.target.style.color = "white";
-        e.target.style.backgroundColor = "orange";
+        e.target.classList.add('active');
     }
 })
+
 ul.addEventListener("mouseover", function (e) {
     if (e.target && e.target.nodeName == "LI") {
-        console.log(e.target.textContent + " is mouse in");
-        e.target.style.color = "white";
-        e.target.style.backgroundColor = "#7c8798";
+        e.target.classList.remove('initBtn');
+        e.target.classList.add('mousein');
+       
+
     }
 });
+
 ul.addEventListener("mouseout", function (e) {
     if (e.target && e.target.nodeName == "LI" && e.target.textContent != rateValue) {
-        console.log(e.target.textContent + " is mouse out");
-        e.target.style.color = "#7c8798";
-        e.target.style.backgroundColor = "#252d37";
+       
+       e.target.classList.remove('mousein');
+       e.target.classList.add('initBtn');
     } else if (e.target.textContent === rateValue) {
-        e.target.style.color = "white";
-        e.target.style.backgroundColor = "orange";
+       e.target.classList.add('active');
     }
 });
-
-
 
 function restoreState() {
     list.forEach(element => {
-        element.style.backgroundColor = "#252d37";
-        element.style.color = "#7c8798";
+        element.classList.remove('active');
+        element.classList.add('initBtn');
     });
 }
 function submitFnc() {
@@ -49,11 +58,8 @@ function submitFnc() {
         alert("Please select a rate");
         return;
     }
-    ratingState.style.display = "none";
     rateValueText.textContent = "You selected "+ rateValue+" out of 5";
-    thankYouState.style.display = "flex";
-
-}
-function itemSelected() {
+    ratingState.classList.add('hide');
+    thankYouState.classList.remove('hide');
 
 }
